@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
@@ -11,7 +13,6 @@
 
 		<div id="header" class="box header">
 			<h1>Data Security Breaches In US Health Care</h1>
-			<h2>2009–2013</h2>
 			<hr id="sepLine" />
 		</div>
 
@@ -20,48 +21,48 @@
 				The health care sector works with a lot of sensitive and private data such as
 				social security numbers, addresses, medical diagnoses etc.
 			</p>
-			<p class="bigger">
+			<p class="big">
 				A total of
-				<span class="numberText" id="totalnr">0</span> security breaches reported.
+				<span class="numberText" id="totalnr">0</span> security breaches were reported between 2009 and 2013 in US Health Care.
 			</p>
 			<div class="three_col">
-				<img src="images/theftwhite.svg" width="150px">
-				<p>Thefts</p>
+				<img src="images/theftwhite.svg" width="110px">
+				<p>Thefts  <i class="material-icons ikoner icontooltip" title="One or several unauthorized people break into facilities and steal physical items such as computers and documents.">info </i></p>
 				<p class="numberText" id="thefts">
 					<span id="theftnr">0</span>
 				</p>
 			</div>
 			<div class="three_col">
-				<img src="images/unauthorizedaccesswhite.svg" width="150px">
-				<p>Unauthorized Access</p>
+				<img src="images/unauthorizedaccesswhite.svg" width="110px">
+				<p>Unauthorized Access  <i class="material-icons ikoner icontooltip" title="Due to administrational or software errors, unauthorized people have received confidential information about other individuals.">info </i></p>
 				<p class="numberText" id="others">
 					<span id="accessnr">0</span>
 				</p>
 			</div>
 			<div class="three_col">
-				<img src="images/losswhite.svg" width="150px">
-				<p>Loss</p>
+				<img src="images/losswhite.svg" width="110px">
+				<p>Loss  <i class="material-icons ikoner icontooltip" title="Items such as laptops, documents or portable electronics being lost by employees or during transportation.">info </i></p>
 				<p class="numberText" id="others">
 					<span id="lossnr">0</span>
 				</p>
 			</div>
 			<div class="three_col">
-				<img src="images/hackingwhite.svg" width="150px">
-				<p>Hacking/IT Incidents</p>
+				<img src="images/hackingwhite.svg" width="110px">
+				<p>Hacking/IT Incidents   <i class="material-icons ikoner icontooltip" title="External unauthorized person(s) impermissibly gaining access to individuals confidential information through hacking into servers.">info </i></p>
 				<p class="numberText" id="hacking_incidents">
 					<span id="hacknr">0</span>
 				</p>
 			</div>
 			<div class="three_col">
-				<img src="images/disposalwhite.svg" width="150px">
-				<p>Disposal</p>
+				<img src="images/disposalwhite.svg" width="110px">
+				<p>Disposal  <i class="material-icons ikoner icontooltip" title="Improperly disposed documents and portable electronics.">info </i></p>
 				<p class="numberText" id="others">
 					<span id="dissnr">0</span>
 				</p>
 			</div>
 			<div class="three_col">
-				<img src="images/otherwhite.svg" width="150px">
-				<p>Others</p>
+				<img src="images/otherwhite.svg" width="110px">
+				<p>Others <i class="material-icons ikoner icontooltip" title="Other kind of breaches such as leakages of reports, sendings of prescriptions to wrong addresses, mistakenly including confidential information on different releases etc.">info </i></p>
 				<p class="numberText" id="others">
 					<span id="othersnr">0</span>
 				</p>
@@ -70,10 +71,11 @@
 
 		<div class="box box1 regular">
 			<h2>Affected individuals</h2>
+				<hr id="sepLine" />
 
 			<div class="column">
-				<p class="big">
-					These data breaches affect many people. The chart on the right show the total number
+				<p class="medium" id="textaffected">
+					The different data breaches affect many people. The chart on the right show the total number
 					of affected people per breach type.
 				</p>
 			</div>
@@ -85,6 +87,7 @@
 
 		<div class="box regular">
 			<h2>Types of attacks and target items</h2>
+				<hr id="sepLine" />
 
 			<div class="column">
 				<h3>Stolen items</h3>
@@ -121,6 +124,7 @@
 
 		<div class="box box1 regular" id="map-box">
 			<h2>Number of breaches per state</h2>
+				<hr id="sepLine" />
 			<p>Hover over the states to show details!</p>
 
 			<div id="statesContainer">
@@ -148,6 +152,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://infovis.sjolie.se/js/dimple.v2.3.0.js"></script>
 	<script src="script/venn.min.js"></script>
 	<script src="script/script.js"></script>

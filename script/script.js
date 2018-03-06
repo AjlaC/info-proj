@@ -10,6 +10,24 @@ $('#lossnr').animateNumber({ number: 86 }, timesec*0.4);
 $('#hacknr').animateNumber({ number: 64 }, timesec*0.4);
 $('#dissnr').animateNumber({ number: 38 }, timesec*0.4);
 
+$( function() {
+    $( document ).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+  } );
+
+
 
 function drawTheftsPlot() {
   d3.tsv("https://dl.dropbox.com/s/m616ci5b4y8dqhb/breaches%20%283%29.xlsx%20-%20Taul1.tsv?dl=0", function (data) {
@@ -190,7 +208,7 @@ d3.csv(stateCSV, function(data) {
 	    theft = d["Theft"],
 	    disclosure = d["Unauthorized Access/Disclosure"],
 	    sum = d["Totalsumma"];
-	data[state]={hacking:hacking, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, color:d3.interpolate("#ffffcc", "#800026")((sum)/75)};
+	data[state]={hacking:hacking/100, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, color:d3.interpolate("#ffffcc", "#800026")((sum)/75)};
     }),
     loaded_stateData = data;
     uStates.draw("#statesvg", data, tooltipHtml);
