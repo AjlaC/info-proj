@@ -70,6 +70,8 @@ function filterType(event) {
 document.querySelector("#type-filter").addEventListener('change', filterType);
 
 
+
+
 function drawBarChart () {
     var svg = dimple.newSvg("#barChartContainer", 690, 500);
 
