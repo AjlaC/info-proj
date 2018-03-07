@@ -117,6 +117,7 @@ function tooltipHtml(n, d){	/* function to create html content string in tooltip
 	"<tr><td>Theft</td><td>"+(d.theft)+"</td></tr>"+
 	"<tr><td>Unauth. access</td><td>"+(d.disclosure)+"</td></tr>"+
 	"<tr><td>Total</td><td>"+(d.sum)+"</td></tr>"+
+    "<tr><td>Breaches per <br> 100k people</td><td>"+((d.sum)/(d.population) * 100000).toFixed(3)+"</td></tr>"+
 	"</table>";
 }
 
@@ -211,8 +212,9 @@ d3.csv(stateCSV, function(data) {
 	    other = d["Other / Unknown"],
 	    theft = d["Theft"],
 	    disclosure = d["Unauthorized Access/Disclosure"],
-	    sum = d["Totalsumma"];
-	data[state]={hacking:hacking/100, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, color:d3.interpolate("#ffffcc", "#800026")((sum)/75)};
+	    sum = d["Totalsumma"],
+        population=d["Population"];
+	data[state]={hacking:hacking, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, population:population, color:d3.interpolate("#ffffcc", "#800026")((sum/population) * 100000)};
     }),
     loaded_stateData = data;
     uStates.draw("#statesvg", data, tooltipHtml, data);
