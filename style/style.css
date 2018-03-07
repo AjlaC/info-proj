@@ -306,16 +306,35 @@ footer a:visited {
 	text-align: center;
 }
 
+#textintro{
+	background-color: rgba(255,255,255,0.2); 
+	width: 90%;
+	padding: 1em; 
+	margin-left: 5em;
+	margin-top: 2em; 
+	position: relative;
+	font-size: 15px;
 
+}
 
 #textaffected{
-	background-color: rgba(255,255,255,0.6); 
-	width: 60%;
+	background-color: rgba(255,255,255,0.2); 
+	width: 80%;
 	padding: 1em; 
-	margin-left: 10em;
-	margin-top: 5em; 
+	margin-left: 5em;
+	margin-top: 2em; 
 	position: relative;
+	font-size: 15px;
 
+}
+
+#textattacks{
+	background-color: rgba(255,255,255,0.1); 
+	width: 50%;
+	padding: 1em; 
+	margin-left: 25%;
+	font-size: 15px;
+	align-content: center;
 }
 
 

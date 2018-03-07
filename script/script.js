@@ -194,6 +194,10 @@ function tooltipHtml(n, d){	/* function to create html content string in tooltip
 			.data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d;})
 		.style("fill",function(d){ return data[d.id].color; })
 		.on("mouseover", mouseOver).on("mouseout", mouseOut);
+
+   
+
+
 	};
     this.uStates=uStates;
 })();
@@ -211,7 +215,7 @@ d3.csv(stateCSV, function(data) {
 	data[state]={hacking:hacking/100, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, color:d3.interpolate("#ffffcc", "#800026")((sum)/75)};
     }),
     loaded_stateData = data;
-    uStates.draw("#statesvg", data, tooltipHtml);
+    uStates.draw("#statesvg", data, tooltipHtml, data);
     drawTheftsPlot();
     drawBarChart();
 });

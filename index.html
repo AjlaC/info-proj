@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<title>[ajlac] Individual Project (InfoViz 2018)</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +18,7 @@
 		</div>
 
 		<div id="stats" class="box regular">
+			<div id="textintro">
 			<p class="big" style="padding: 0 5rem;">
 				The health care sector works with a lot of sensitive and private data such as
 				social security numbers, addresses, medical diagnoses etc.
@@ -25,6 +27,7 @@
 				A total of
 				<span class="numberText" id="totalnr">0</span> security breaches were reported between 2009 and 2013 in US Health Care.
 			</p>
+		</div>
 			<div class="three_col">
 				<img src="images/theftwhite.svg" width="110px">
 				<p>Thefts  <i class="material-icons ikoner icontooltip" title="One or several unauthorized people break into facilities and steal physical items such as computers and documents.">info </i></p>
@@ -70,38 +73,38 @@
 		</div>
 
 		<div class="box box1 regular">
-			<h2>Affected individuals</h2>
+			<h2>Affected targets</h2>
 				<hr id="sepLine" />
 
 			<div class="column">
+				<h3>Affected individuals</h3>
 				<p class="medium" id="textaffected">
 					The different data breaches affect many people. The chart on the right show the total number
 					of affected people per breach type.
 				</p>
+
+				<div class="center">
+					<div style="margin-left: 7em;" id="barChartContainer"></div>
+				</div>
+
 			</div>
 
-			<div class="column">
-				<div id="barChartContainer"></div>
-			</div>
-		</div>
-
-		<div class="box regular">
-			<h2>Types of attacks and target items</h2>
-				<hr id="sepLine" />
+			
 
 			<div class="column">
 				<h3>Stolen items</h3>
-				<p class="medium">Visualization of the items stolen and in how many cases that has happened. During some cases, several items were stolen.</p>
+				<p class="medium" id="textaffected">Visualization of the items stolen and in how many cases that has happened. During some cases, several items were stolen.</p>
 
 				<div class="center">
 					<div id="venn"></div>
 				</div>
 			</div>
+		</div>
 
-
-			<div class="column">
-				<h3>Behaviour over the years</h3>
-				<p class="medium">Visualization of the different types of breaches over the years 2009 - 2013.</p>
+		<div class="box regular">
+			<h2>Types of attacks</h2>
+				<hr id="sepLine" />
+				<p class="medium" id="textattacks" style="text-align: center;">Visualization of the different types of breaches over the years 2009 - 2013.</p>
 
 				<div class="center">
 					<div id="theftsContainer"></div>
@@ -119,7 +122,7 @@
 						<option value="Other / Unknown">Other / Unknown</option>
 					</select>
 				</div>
-			</div>
+		
 		</div>
 
 		<div class="box box1 regular" id="map-box">
