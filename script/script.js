@@ -2,6 +2,15 @@ var lineChart, test;
 var svgLine = dimple.newSvg("#theftsContainer", 590, 410);
 var timesec = 3000;
 
+
+// click on the ".open" link (the right arrow in the nav)
+$(".left a.open").on("click", function(e) {
+  // stop default browser behavior
+  e.preventDefault();
+  // get the <body>. Does it currently have a class of "open-nav"? If it does, remove the class, which will collapse the left column.' If it does not have a class of "open-nav", add it, which will expand the left column.
+  $("body").toggleClass("open-nav");
+});
+
 $('#totalnr').animateNumber({ number: 977 }, timesec);
 $('#theftnr').animateNumber({ number: 541 }, timesec*0.554);
 $('#accessnr').animateNumber({ number: 154 }, timesec*0.4);
@@ -10,7 +19,7 @@ $('#lossnr').animateNumber({ number: 86 }, timesec*0.4);
 $('#hacknr').animateNumber({ number: 64 }, timesec*0.4);
 $('#dissnr').animateNumber({ number: 38 }, timesec*0.4);
 
-$( function() {
+jQuery( document ).ready(function( $ ) {
     $( document ).tooltip({
       position: {
         my: "center bottom-20",
@@ -219,7 +228,7 @@ d3.csv(stateCSV, function(data) {
 	data[state]={hacking:hacking, improper:improper, loss:loss, other:other, theft:theft, disclosure:disclosure,  sum:sum, population:population, color:d3.interpolate("#ffffcc", "#800026")((sum/population) * 100000)};
     }),
     loaded_stateData = data;
-    uStates.draw("#statesvg", data, tooltipHtml, data);
+    uStates.draw("#statesvg", data, tooltipHtml);
     drawTheftsPlot();
     drawBarChart();
 });

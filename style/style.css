@@ -1,5 +1,5 @@
 body {
-    background: #222;
+    background: #24363b;
     font-family: 'Lato', sans-serif;
     color: rgb(46, 46, 46);
 	margin: 0px;
@@ -165,7 +165,9 @@ footer a:visited {
     bottom: -20px;
     top: auto;
   }
-
+.ui-helper-hidden-accessible{
+  display: none;
+}
 
 .box {
 	color: #246563;
@@ -174,7 +176,7 @@ footer a:visited {
 
 .box1 {
 	padding-top: 2rem;
-	background-color: #444;
+	background-color: #1e2e32;
 }
 
 #map-box {
@@ -307,7 +309,6 @@ footer a:visited {
 }
 
 #textintro{
-	background-color: rgba(255,255,255,0.2); 
 	width: 90%;
 	padding: 1em; 
 	margin-left: 5em;
@@ -421,3 +422,45 @@ footer a:visited {
 }
 
 /* End Venn diagram */
+
+
+/*  Simple CSS menu */
+
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 5em;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    margin-top: 1em;
+}
+
+.sidenav a:hover {
+    background-color: #24363b;
+    color: white;
+}
+
+.main {
+    margin-left: 100px; /* Same as the width of the sidenav */
+    padding: 0px 5px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+

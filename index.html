@@ -10,8 +10,18 @@
 </head>
 
 <body>
-	<div id="poster">
 
+
+<div class="sidenav">
+  <a href="#">Overview</a>
+  <a href="#targets">Targets</a>
+  <a href="#attacks">Attacks</a>
+  <a href="#states">States</a>
+</div>
+
+
+
+<div id="poster" class="main">
 		<div id="header" class="box header">
 			<h1>Data Security Breaches In US Health Care</h1>
 			<hr id="sepLine" />
@@ -70,9 +80,10 @@
 					<span id="othersnr">0</span>
 				</p>
 			</div>
+
 		</div>
 
-		<div class="box box1 regular">
+		<div class="box box1 regular" id="targets">
 			<h2>Affected targets</h2>
 				<hr id="sepLine" />
 
@@ -101,7 +112,7 @@
 			</div>
 		</div>
 
-		<div class="box regular">
+		<div class="box regular" id="attacks">
 			<h2>Types of attacks</h2>
 				<hr id="sepLine" />
 				<p class="medium" id="textattacks" style="text-align: center;">Visualization of the different types of breaches over the years 2009 - 2013.</p>
@@ -111,7 +122,7 @@
 				</div>
 
 				<div class="center-text">
-					<label for="type-filter">Filter by type of Incident: </label>
+					<label for="type-filter">Filter and Zoom by type of Incident: </label>
 					<select name="" id="type-filter">
 						<option value="Type">All</option>
 						<option value="Hacking/IT Incident">Hacking/IT Incident</option>
@@ -125,7 +136,10 @@
 		
 		</div>
 
-		<div class="box box1 regular" id="map-box">
+		
+		<div class="box box1 regular " id="states">
+
+		<div id="map-box">
 			<h2>Number of breaches per state per capita</h2>
 				<hr id="sepLine" />
 			<p class="medium" id="textaffected">The number of breaches are shown in a factor between 0 and 1. This means number of breaches per 100 000 people. <br> Hover over the states to show details!</p>
@@ -145,7 +159,7 @@
 				<div class="swatches"></div>
 			</div>
 		</div>
-
+	</div>
 	</div>
 
 	<footer class="box">
